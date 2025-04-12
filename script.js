@@ -4,8 +4,8 @@ const reasons = [
     text: "Because the world is filled with beautiful places waiting for you."
   },
   {
-    img: "https://source.unsplash.com/400x300/?dog",
-    text: "Because someone—human or animal—needs your love and care."
+    img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/hotpink-blossom1.jpg", 
+    text: "The blossoms are too pretty."
   },
   {
     img: "https://source.unsplash.com/400x300/?sunrise",
