@@ -32,21 +32,30 @@ Remember, green's your color. You are Spring.`,
   {
     type: "image",
     img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/begging-dog1.jpg",
-    text: "Because your dog will miss you terribly."
+    text: "Your dog will miss you terribly."
   },
   {
     type: "testimonial",
     content: "I saw a person on the sidewalk stopping to take pictures of the blossomed trees. Made me smile wide. I love seeing people find beauty in nature, I love seeing people appreciate it and not being afraid to stop and appreciate it."
   },
   {
+    type: "image",
+    img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/cats-in-a-crate.jpg",
+    text: "You haven't pet all the cats yet."
+  },
+  {
     type: "quote",
-    content: "The world breaks everyone, and afterward, some are strong at the broken places.",
-    author: "Ernest Hemingway"
+    content: "I also have nature and art and poetry, and if that isn't enough, what is?",
+    author: "Vincent Van Gogh"
   },
   {
     type: "image",
-    img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/yellow-flower1.jpg",
-    text: "Because yellow flowers emit joy."
+    img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/yellow-flower3.jpg",
+    text: "Yellow flowers want you to look at them. They are determined to show you joy, let them."
+  },
+  {
+    type: "testimonial",
+    content: "I'm not going to lie, I've thought about it. I have. And all of my reactions to these thoughts of mine were “yeah, I agree” and not “you're stupid, don't think about it”. I won't act on it because of the promise I made to you. You wouldn't forgive me in this or the next life if I left. I wouldn't forgive me either if I were you."
   },
   {
     type: "quote",
@@ -55,12 +64,8 @@ Remember, green's your color. You are Spring.`,
   },
   {
     type: "image",
-    img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/yellow-flower2.jpg"
-  },
-  {
-    type: "image",
-    img: "https://source.unsplash.com/400x300/?stars",
-    text: "Because the stars still shine for you."
+    img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/fire-roses.jpg",
+    text: "No matter how hidden, there's fire burning inside you. That spark is waiting to be found."
   }
 ];
 

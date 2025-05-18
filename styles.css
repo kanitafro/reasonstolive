@@ -1,20 +1,91 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f5f5;
+  background-color: #ebf1e9;
   color: #333;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-
+/*
 header {
-  background-color: #2d2d2d;
-  color: white;
+  background-color: #1f5039;
+  color: #eaf0e8;
+  font-family: serif;
+  font-size: 2rem;
   width: 100%;
   padding: 2rem 1rem;
   text-align: center;
   margin-bottom: 2rem;
+}*/
+header {
+  background: 
+    linear-gradient(to bottom, 
+      rgba(3, 36, 20, 0.6), 
+      rgba(3, 36, 20, 0.3)),
+    url('https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/header-image1.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ebf1e9;
+  font-size: 50px;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-overlay {
+  position: relative;
+  z-index: 2; /* Ensures text stays above the overlay */
+}
+
+header h1 {
+  font-family: serif;
+  font-size: 3rem; /* Slightly larger for better visibility */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Improves text readability */
+  margin: 0;
+  padding: 1rem;
+  display: inline-block;
+}
+
+.subtitle {
+  text-align: center;
+  max-width: 800px;
+  margin: -1.5rem auto 2rem auto;
+  padding: 0 1rem;
+  color: #1f5039; /* Matching your header color */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Optional: Add a subtle decorative line */
+.subtitle p {
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.subtitle p::before,
+.subtitle p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 1px;
+  background-color: rgba(3, 36, 20, 0.659);
+}
+
+.subtitle p::before {
+  left: -30px;
+}
+
+.subtitle p::after {
+  right: -30px;
 }
 
 .gallery-container {
@@ -64,9 +135,9 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 239, 12, 0.471);
-  color: rgba(0, 0, 0, 0.858);
-  padding: 1rem;
+  background: rgba(11, 0, 20, 0.628);
+  color: rgba(230, 235, 223, 0.91);
+  padding: 1.1rem;
   font-family: Verdana, sans-serif;
   font-size: 0.9rem;
   transform: translateY(100%);
@@ -84,15 +155,20 @@ header {
   background: #fff3cd;
   border-left: 5px solid #ffc107;
   padding: 1.5rem;
-  font-style: italic;
+  font-style: normal;
+  color: #0B0014;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  white-space: pre-line;
+  line-height: 1.1;
   position: relative;
   margin: 0;
 }
 
 /* Quote style */
 .quote {
-  background: #f8f9fa;
-  border-left: 5px solid #6c757d;
+  background: #edd5d4;
+  border-left: 5px solid #DF928E;
   padding: 1.5rem;
   position: relative;
   margin: 0;
@@ -104,7 +180,7 @@ header {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   font-style: normal;
-  color: #2b2b2b;
+  color: #0B0014;
   font-family: 'Lucida Handwriting', cursive, serif; /* New font stack */
   font-size: 0.9rem;
 }
@@ -113,6 +189,7 @@ header {
   line-height: 1.6;
   margin-bottom: 1rem;
   font-style: normal;
+  color: #0B0014;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -132,13 +209,26 @@ header {
   font-weight: normal; /* Changed from bold for better script look */
   margin-top: 0.5rem;
   font-style: normal;
-  color: #2b2b2b;
+  color: #0B0014;
   font-family: 'Lucida Handwriting', cursive, serif; /* New font stack */
   font-size: 0.8rem; /* Slightly larger for readability */
 }
+.help-button {
+  background-color: #98bdac;
+  color: #063921;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 0 0.3rem;
+}
+
+.help-button:hover {
+  background-color: #0B0014;
+  color: white;
+}
 
 footer {
-  background-color: #2d2d2d;
+  background-color: #1f5039;
   color: white;
   text-align: center;
   padding: 1.5rem;
