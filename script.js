@@ -1,24 +1,64 @@
 const reasons = [
   {
+    type: "image",
+    img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/hotpink-blossom1.jpg", 
+    text: "The blossoms want to bloom for you."
+  },
+  {
+    type: "quote",
+    title:"To the Young Who Want to Die",
+    content: `Sit down. Inhale. Exhale.
+The gun will wait. The lake will wait.
+The tall gall in the small seductive vial
+will wait will wait:
+will wait a week: will wait through April
+
+You do not have to die this certain day.
+Death will abide, will pamper your postponement
+I assure you death will wait. Death has
+a lot of time. Death can
+attend to you tomorrow. Or next week. Death is
+just down the street; is most obliging neighbor;
+can meet you any moment.
+
+You need not die today
+Stay here - through pout or pain or peskyness.
+Stay here. See what the news is going to be tomorrow.
+
+Graves grow no green that you can use.
+Remember, green's your color. You are Spring.`,
+    author: "Gwendolyn Brooks"
+  },
+  {
+    type: "image",
     img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/begging-dog1.jpg",
     text: "Because your dog will miss you terribly."
   },
   {
-    img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/hotpink-blossom1.jpg", 
-    text: "The blossoms are too pretty."
+    type: "testimonial",
+    content: "I saw a person on the sidewalk stopping to take pictures of the blossomed trees. Made me smile wide. I love seeing people find beauty in nature, I love seeing people appreciate it and not being afraid to stop and appreciate it."
   },
   {
-    testimonial: "I saw a person on the sidewalk stopping to take pictures of the blossomed trees. Made me smile wide. I love seeing people find beauty in nature, I love seeing people appreciate it and not being afraid to stop and appreciate it. This is something I had to learn over the past couple of years or so. Slow down, there's no shame in stopping to appreciate life. My camera roll is full of close-ups of blossoms, colorful weed, and many kinds of flowers – those that I can recognize and those that I'm not able to name in a million years but I appreciate them the same nevertheless. I love these rare moments in which the world feels like a nice place when most of the time it's evil beyond comprehension."
+    type: "quote",
+    content: "The world breaks everyone, and afterward, some are strong at the broken places.",
+    author: "Ernest Hemingway"
   },
   {
+    type: "image",
     img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/yellow-flower1.jpg",
     text: "Because yellow flowers emit joy."
   },
-  
   {
+    type: "quote",
+    content: "As you grow older, you will discover that you have two hands, one for helping yourself, the other for helping others",
+    author: "Audrey Hepburn"
+  },
+  {
+    type: "image",
     img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/yellow-flower2.jpg"
   },
   {
+    type: "image",
     img: "https://source.unsplash.com/400x300/?stars",
     text: "Because the stars still shine for you."
   }
@@ -30,22 +70,57 @@ reasons.forEach((reason) => {
   const card = document.createElement("div");
   card.className = "card";
 
-  if (reason.testimonial) {
-    const bubble = document.createElement("p");
-    bubble.className = "speech-bubble";
-    bubble.textContent = reason.testimonial;
-    card.appendChild(bubble);
-  } else {
+  if (reason.type === "image") {
+    const imageContainer = document.createElement("div");
+    imageContainer.className = "card-image";
+    
     const image = document.createElement("img");
     image.src = reason.img;
     image.alt = "Reason to live image";
 
-    const text = document.createElement("p");
-    text.textContent = reason.text;
-
-    card.appendChild(image);
-    card.appendChild(text);
-  }
+    imageContainer.appendChild(image);
+    
+    if (reason.text) {
+      const caption = document.createElement("div");
+      caption.className = "card-caption";
+      caption.textContent = reason.text;
+      imageContainer.appendChild(caption);
+    }
+    
+    card.appendChild(imageContainer);
+    
+  } else if (reason.type === "testimonial") {
+    const testimonial = document.createElement("p");
+    testimonial.className = "testimonial";
+    testimonial.textContent = reason.content;
+    card.appendChild(testimonial);
+    
+  } // Update the card creation logic (inside forEach loop):
+   else if (reason.type === "quote") {
+    const quote = document.createElement("div");
+    quote.className = "quote";
+    
+    if (reason.title) {
+      const title = document.createElement("h3");
+      title.className = "quote-title";
+      title.textContent = reason.title;
+      quote.appendChild(title);
+    }
+    
+    const content = document.createElement("div");
+    content.className = "quote-content";
+    content.innerHTML = `"${reason.content}"`;
+    quote.appendChild(content);
+    
+    if (reason.author) {
+      const author = document.createElement("div");
+      author.className = "quote-author";
+      author.textContent = `— ${reason.author}`;
+      quote.appendChild(author);
+    }
+    
+    card.appendChild(quote);
+}
 
   gallery.appendChild(card);
 });

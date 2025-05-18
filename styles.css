@@ -5,32 +5,46 @@ body {
   color: #333;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
 }
 
 header {
   background-color: #2d2d2d;
   color: white;
   width: 100%;
-  padding: 1rem;
+  padding: 2rem 1rem;
   text-align: center;
+  margin-bottom: 2rem;
+}
+
+.gallery-container {
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .gallery {
   column-count: 3;
-  column-gap: 1rem;
-  padding: 2rem;
-  max-width: 1200px;
-  width: 100%;
+  column-gap: 1.5rem;
+  margin: 0 auto;
 }
 
 .card {
   background-color: white;
-  border-radius: 10px;
-  margin-bottom: 1rem;
+  border-radius: 0;
+  margin-bottom: 1.5rem;
   display: inline-block;
   width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  break-inside: avoid;
+  position: relative;
+  border: 1px solid #eee;
+}
+
+.card-image {
+  position: relative;
   overflow: hidden;
 }
 
@@ -38,34 +52,98 @@ header {
   width: 100%;
   display: block;
   height: auto;
+  transition: transform 0.3s ease;
 }
 
-.card p {
+.card:hover img {
+  transform: scale(1.02);
+}
+
+.card-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 239, 12, 0.471);
+  color: rgba(0, 0, 0, 0.858);
   padding: 1rem;
-  font-size: 1rem;
+  font-family: Verdana, sans-serif;
+  font-size: 0.9rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  opacity: 0;
 }
 
-/* Speech bubble style for text-only testimonials */
-.speech-bubble {
+.card:hover .card-caption {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Testimonial style */
+.testimonial {
   background: #fff3cd;
   border-left: 5px solid #ffc107;
-  border-radius: 8px;
-  padding: 1rem;
+  padding: 1.5rem;
   font-style: italic;
   position: relative;
   margin: 0;
 }
 
-.speech-bubble::before {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 20px;
-  border-width: 10px 10px 0;
-  border-style: solid;
-  border-color: #fff3cd transparent;
-  display: block;
-  width: 0;
+/* Quote style */
+.quote {
+  background: #f8f9fa;
+  border-left: 5px solid #6c757d;
+  padding: 1.5rem;
+  position: relative;
+  margin: 0;
+  white-space: pre-line; /* This preserves line breaks */
+  line-height: 1.1; /* Better spacing between lines */
+}
+.quote-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-style: normal;
+  color: #2b2b2b;
+  font-family: 'Lucida Handwriting', cursive, serif; /* New font stack */
+  font-size: 0.9rem;
+}
+.quote-content {
+  white-space: pre-line;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-style: normal;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.quote-content br {
+  display: block; /* Ensures line breaks are visible */
+  content: " ";
+  margin-bottom: 0.5em;/* Space between stanzas */
+}
+
+.quote-author {
+  /*display: block;
+  text-align: right;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  font-style: normal;*/
+  text-align: right;
+  font-weight: normal; /* Changed from bold for better script look */
+  margin-top: 0.5rem;
+  font-style: normal;
+  color: #2b2b2b;
+  font-family: 'Lucida Handwriting', cursive, serif; /* New font stack */
+  font-size: 0.8rem; /* Slightly larger for readability */
+}
+
+footer {
+  background-color: #2d2d2d;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  width: 100%;
 }
 
 /* Responsive masonry columns */
@@ -78,5 +156,6 @@ header {
 @media (max-width: 600px) {
   .gallery {
     column-count: 1;
+  padding: 0 1rem;
   }
 }
