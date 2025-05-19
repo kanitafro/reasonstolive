@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reasons to Live</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <header>
@@ -12,7 +13,9 @@
     <h1>Reasons to Live</h1>
   </div>
 </header>
-<div class="subtitle">
+
+<main class="main-container">
+  <div class="subtitle">
   <p>Your life is worth living. These are just some of the reminders.</p>
 </div>
 
@@ -21,47 +24,25 @@
       <!-- Cards will be added here via JavaScript -->
     </div>
   </div>
-<!--
-  <div class="submission-form">
-  <h3>Share Your Reason</h3>
-  <form id="reasonForm">
-    <div class="form-group">
-      <label for="type">Type:</label>
-      <select id="type" name="type" required>
-        <option value="">Select</option>
-        <option value="quote">Quote</option>
-        <option value="testimonial">Testimonial</option>
-        <option value="image">Image</option>
-      </select>
-    </div>
 
-    <div class="form-group" id="nameField">
-      <label for="name">Name or Alias:</label>
-      <input type="text" id="name" name="name">
-    </div>
-
-    <div class="form-group" id="contentField">
-      <label for="content" id="contentLabel">Content:</label>
-      <textarea id="content" name="content" required></textarea>
-    </div>
-
-    <button type="submit">Submit</button>
-  </form>
-
-  <div class="github-guide" id="imageGuide" style="display:none;">
-    <h4>For image submissions:</h4>
-    <p>1. Upload your image to <a href="https://github.com/kanitafro/reasonstolive" target="_blank">our GitHub repository</a></p>
-    <p>2. Use the caption above when submitting</p>
-    <a href="https://github.com/kanitafro/reasonstolive" class="github-button" target="_blank">
-      GitHub Repository
+  <div class="submission-cta">
+    <h3>Have a reason to share?</h3>
+    <a href="https://forms.gle/vFCW7XWY7F2R7xeV8" class="submission-button" target="_blank">
+      <i class="fas fa-plus-circle"></i> Submit Your Reason
     </a>
   </div>
-</div>
--->
+    
+  </main>
+
+  
   <footer>
-    <p>You're not alone.</p>
-    <p>If you need someone to talk to, find your country's hotline here: <a class="help-button" href="https://blog.opencounseling.com/suicide-hotlines/" target="_blank" rel="noopener noreferrer">Emergency Help Lines</a></p>
+    <div class="footer-content"></div>
+      <p>You're not alone.     </p>
+      <p>If you need someone to talk to, find your country's hotline here: <a class="help-button" href="https://blog.opencounseling.com/suicide-hotlines/" target="_blank" rel="noopener noreferrer">Emergency Help Lines</a></p>
+     </div>
   </footer>
+  
+    
 
   <script src="script.js"></script>
 </body>
