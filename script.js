@@ -1,10 +1,5 @@
 const reasons = [
-  {
-    type: "image",
-    img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/hotpink-blossom1.jpg", 
-    text: "The blossoms want to bloom for you."
-  },
-  {
+    {
     type: "quote",
     title:"To the Young Who Want to Die",
     content: `Sit down. Inhale. Exhale.
@@ -31,12 +26,23 @@ Remember, green's your color. You are Spring.`,
   },
   {
     type: "image",
+    img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/hotpink-blossom1.jpg", 
+    text: "The blossoms want to bloom for you."
+  },
+  {
+    type: "image",
     img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/begging-dog1.jpg",
     text: "Your dog will miss you terribly."
   },
   {
+    type: "image",
+    img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/german-notes.jpg",
+    text: "There are so many languages left to learn"
+  },
+  {
     type: "testimonial",
-    content: "I saw a person on the sidewalk stopping to take pictures of the blossomed trees. Made me smile wide. I love seeing people find beauty in nature, I love seeing people appreciate it and not being afraid to stop and appreciate it."
+    content: "I saw a person on the sidewalk stopping to take pictures of the blossomed trees. Made me smile wide. I love seeing people find beauty in nature, I love seeing people appreciate it and not being afraid to stop and appreciate it.",
+    author: "Kanita"
   },
   {
     type: "image",
@@ -49,13 +55,29 @@ Remember, green's your color. You are Spring.`,
     author: "Vincent Van Gogh"
   },
   {
-    type: "image",
-    img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/yellow-flower3.jpg",
-    text: "Yellow flowers want you to look at them. They are determined to show you joy, let them."
+    type: "testimonial",
+    content: "I'm not going to lie, I've thought about it. I have. And all of my reactions to these thoughts of mine were “yeah, I agree” and not “you're stupid, don't think about it”. I won't act on it because of the promise I made to you. You wouldn't forgive me in this or the next life if I left. I wouldn't forgive me either if I were you.",
+    author: "Kanita"
   },
   {
-    type: "testimonial",
-    content: "I'm not going to lie, I've thought about it. I have. And all of my reactions to these thoughts of mine were “yeah, I agree” and not “you're stupid, don't think about it”. I won't act on it because of the promise I made to you. You wouldn't forgive me in this or the next life if I left. I wouldn't forgive me either if I were you."
+    type: "image",
+    img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/yellow-flower3.jpg",
+    text: "Yellow flowers want you to look at them. They are determined to show you joy, let them. Even the tiniest bits of joy are powerful."
+  },
+  {
+    type: "image",
+    img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/yarn-colorful.jpg",
+    text: "There are so many things that haven't been created yet and they're waiting for you to create them."
+  },
+  {
+    type: "quote",
+    content: "The sun is fooding into my room as I write and I have spent the afternoon buying oranges and cheese and honey and being very happy after having for two weeks been very ill, because can see every now and then how one must live in this world even if one's true full soul is not with one.",
+    author: "Sylvia Plath"
+  },
+  {
+    type: "image",
+    img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/burgundy-flower.jpg",
+    text: "Being brave, even in tiny ways, even if no one else notices it but you."
   },
   {
     type: "quote",
@@ -66,7 +88,13 @@ Remember, green's your color. You are Spring.`,
     type: "image",
     img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/fire-roses.jpg",
     text: "No matter how hidden, there's fire burning inside you. That spark is waiting to be found."
+  },
+  {
+    type: "image",
+    img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/hotpink-blossom-2-bloomed.jpg",
+    text: "You're someone's favourite memory."
   }
+
 ];
 
 const gallery = document.getElementById("gallery");
@@ -95,11 +123,21 @@ reasons.forEach((reason) => {
     card.appendChild(imageContainer);
     
   } else if (reason.type === "testimonial") {
-    const testimonial = document.createElement("p");
+    const testimonial = document.createElement("div");
     testimonial.className = "testimonial";
-    testimonial.textContent = reason.content;
-    card.appendChild(testimonial);
     
+    const content = document.createElement("p");
+    content.textContent = reason.content;
+    testimonial.appendChild(content);
+    
+    if (reason.author) {
+      const author = document.createElement("div");
+      author.className = "testimonial-author";
+      author.textContent = `~ ${reason.author}`;
+      testimonial.appendChild(author);
+    }
+    
+    card.appendChild(testimonial);
   } // Update the card creation logic (inside forEach loop):
    else if (reason.type === "quote") {
     const quote = document.createElement("div");
@@ -129,3 +167,40 @@ reasons.forEach((reason) => {
 
   gallery.appendChild(card);
 });
+
+document.getElementById('type').addEventListener('change', function() {
+  const type = this.value;
+  const authorField = document.getElementById('authorField');
+  const imageNotice = document.getElementById('imageNotice');
+  const contentLabel = document.querySelector('#contentField label');
+
+  // Show/hide fields based on selection
+  authorField.style.display = (type === 'quote' || type === 'testimonial') ? 'block' : 'none';
+  imageNotice.style.display = (type === 'image') ? 'block' : 'none';
+  
+  // Update content label
+  contentLabel.textContent = (type === 'image') 
+    ? "Image Description:" 
+    : "Content:";
+});
+/*
+document.getElementById('reasonForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const type = document.getElementById('type').value;
+  const content = document.getElementById('content').value;
+  
+  if (type === 'image') {
+    // Open GitHub submission instructions
+    window.open('https://github.com/kanitafro/reasonstolive/blob/main/SUBMISSIONS.md', '_blank');
+  } else {
+    const author = document.getElementById('author').value || 'Anonymous';
+    
+    // Here you would normally send data to a server
+    console.log('Submission:', { type, author, content });
+    
+    // For now, just show a confirmation
+    alert('Thank you for your submission! It will be reviewed.');
+    this.reset();
+  }
+});*/
