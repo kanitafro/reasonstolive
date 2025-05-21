@@ -29,10 +29,19 @@ Remember, green's your color. You are Spring.`,
     img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/hotpink-blossom1.jpg", 
     text: "The blossoms want to bloom for you."
   },
+  {},
   {
     type: "image",
     img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/begging-dog1.jpg",
     text: "Your dog will miss you terribly."
+  },
+  {
+    type: "quote",
+    content: `Like two and two make four 
+    I know that life is worth living
+    Even though bread is expensive
+    And the freedom is teeny`,
+    author: "Ferreira Gullar"
   },
   {
     type: "image",
