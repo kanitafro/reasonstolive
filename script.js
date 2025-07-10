@@ -29,7 +29,6 @@ Remember, green's your color. You are Spring.`,
     img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/hotpink-blossom1.jpg", 
     text: "The blossoms want to bloom for you."
   },
-  {},
   {
     type: "image",
     img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/begging-dog1.jpg",
@@ -47,6 +46,11 @@ Remember, green's your color. You are Spring.`,
     type: "image",
     img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/german-notes.jpg",
     text: "There are so many languages left to learn"
+  },
+  {
+    type: "image",
+    img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/fire-roses.jpg",
+    text: "No matter how hidden, there's fire burning inside you. That spark is waiting to be found."
   },
   {
     type: "testimonial",
@@ -74,6 +78,16 @@ Remember, green's your color. You are Spring.`,
     text: "Yellow flowers want you to look at them. They are determined to show you joy, let them. Even the tiniest bits of joy are powerful."
   },
   {
+    type: "testimonial",
+    content: `To live. Live for non-existent British summers. Live for the first crispy sip of a Diet Coke. Live for the heartbreak of another email that starts with “we loved your interview, but on this occasion..”. Live for a good book to ride a thunder storm. Live for tears, live for happiness, live to feel. Some of us are so afraid from allowing ourselves to be in the moment that we miss out on how wonderful we truly are; how wonderful life is that it continues to give us the highs along with the lows.
+
+"Like two and two make four
+I know that life is worth living
+Even though bread is expensive
+And the freedom is teeny"`,
+    author: "Maryam Clark"
+  },
+  {
     type: "image",
     img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/yarn-colorful.jpg",
     text: "There are so many things that haven't been created yet and they're waiting for you to create them."
@@ -92,11 +106,6 @@ Remember, green's your color. You are Spring.`,
     type: "quote",
     content: "As you grow older, you will discover that you have two hands, one for helping yourself, the other for helping others",
     author: "Audrey Hepburn"
-  },
-  {
-    type: "image",
-    img: "https://raw.githubusercontent.com/kanitafro/reasonstolive/main/images/fire-roses.jpg",
-    text: "No matter how hidden, there's fire burning inside you. That spark is waiting to be found."
   },
   {
     type: "image",

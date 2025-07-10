@@ -184,6 +184,12 @@ header h1 {
   font-family: 'Times New Roman', Times, serif;
 }
 
+.testimonial br {
+  display: block; /* Ensures line breaks are visible */
+  content: " ";
+  margin-bottom: 0.5em;/* Space between stanzas */
+}
+
 /* Quote style */
 .quote {
   background: #edd5d4;
