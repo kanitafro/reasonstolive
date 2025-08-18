@@ -64,6 +64,19 @@ Remember, green's your color. You are Spring.`,
   },
   {
     type: "quote",
+    content: `It's been too hard living
+    But I'm afraid to die
+        'Cause I don't know what's up there
+        Beyond the sky
+
+It's been a long
+A long time coming, but I know
+A change gon' come
+Oh yes, it will`,
+    author: "Sam Cooke - A change is gonna come"
+  },   
+  {
+    type: "quote",
     content: "I also have nature and art and poetry, and if that isn't enough, what is?",
     author: "Vincent Van Gogh"
   },
