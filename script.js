@@ -64,6 +64,11 @@ Remember, green's your color. You are Spring.`,
   },
   {
     type: "quote",
+    content: "Something in me is calling to, asking me to go on. Wondering, loving, hoping... Despite it all. So if you get this, if you've been caught up in the whirlpool, if you can hear me, just know I'm wishing the same for you. That you can find a way to keep planting flowers. And if it all becomes too much, just know you can give me a call",
+    author: "Voicemail - Whitney Hanson"
+  },
+  {
+    type: "quote",
     content: `It's been too hard living
     But I'm afraid to die
     'Cause I don't know what's up there
