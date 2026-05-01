@@ -2,6 +2,6 @@
 
 Gallery of all the **little** things that add up to refresh your memory on why your life is worth living.
 
-[Go To Website](https://reasonstolive.space)
+[Go To Website]([https://reasonstolive.space](https://kanitafro.github.io/reasonstolive/))
 
 In memory of Om Arvind
